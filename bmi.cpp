@@ -73,7 +73,11 @@ void process_data(char* input_file, char* output_file)
         
 int main(int argc, char *argv[])
 {
-    // Need to check that 3 arguments were supplied upon execution
-    // This needs to be fixed at a later date
+    if (argc != 3)
+    {
+    	cout << "Invalid Input" << endl;
+    	return 1;
+    }   
     process_data(argv[1], argv[2]);
+    return 0;
 }
